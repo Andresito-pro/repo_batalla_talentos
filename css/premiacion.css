@@ -1,0 +1,177 @@
+/* ============================================================
+   Ceremonia de Premiación
+   ============================================================ */
+
+.page-hero {
+  text-align: center;
+  padding: var(--space-lg) var(--space-md);
+  background: linear-gradient(135deg, #fff0c8 0%, var(--color-bg) 100%);
+}  
+
+.page-hero.award {
+  background: linear-gradient(135deg, #fff0c8 0%, var(--color-bg) 100%);
+}
+
+/* ---------- Confeti decorativo ---------- */
+.confetti-bar {
+  height: 6px;
+  background: linear-gradient(
+    90deg,
+    #c4b8e0,
+    #a8d4f0,
+    #a8dfc8,
+    #f7d794,
+    #f0a8a8,
+    #c4b8e0
+  );
+  background-size: 400% 100%;
+  animation: confettiShift 4s linear infinite;
+}
+
+@keyframes confettiShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 400% 50%;
+  }
+}
+
+/* ---------- Ganadores podio ---------- */
+.winners-section {
+  padding: var(--space-lg) var(--space-md);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.winners-section h2 {
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  margin-bottom: var(--space-lg);
+  text-align: center;
+}
+
+.podium {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-xl);
+}
+
+.podium-place {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  max-width: 280px;
+  text-align: center;
+}
+
+.podium-card {
+  background: white;
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  width: 100%;
+  box-shadow: var(--shadow-card);
+  margin-bottom: var(--space-xs);
+  transition: all var(--transition);
+}
+
+.podium-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.podium-medal {
+  font-size: 2.5rem;
+  margin-bottom: var(--space-xs);
+  display: block;
+}
+
+.podium-card h3 {
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+.podium-card .cat {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.podium-bar {
+  width: 100%;
+  background: linear-gradient(180deg, #e8e4f0, white);
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 8px;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-text-muted);
+}
+
+.podium-place:nth-child(1) .podium-bar {
+  height: 80px;
+}
+.podium-place:nth-child(2) .podium-bar {
+  height: 120px;
+  background: linear-gradient(180deg, #fff0c8, white);
+}
+.podium-place:nth-child(3) .podium-bar {
+  height: 60px;
+}
+
+/* ---------- Mensaje de felicitación ---------- */
+.congrats-section {
+  background: linear-gradient(135deg, var(--color-cream), white);
+  padding: var(--space-xl) var(--space-md);
+}
+
+.congrats-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.trophy-icon {
+  font-size: 4rem;
+  margin-bottom: var(--space-sm);
+  display: block;
+  animation: trophyBounce 2s ease-in-out infinite;
+}
+
+@keyframes trophyBounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.congrats-inner h2 {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  margin-bottom: var(--space-sm);
+}
+
+.congrats-inner p.lead {
+  font-size: 1.05rem;
+  color: var(--color-text-light);
+  margin-bottom: var(--space-lg);
+}
+
+@media (max-width: 700px) {
+  .podium {
+    flex-direction: column;
+    align-items: center;
+  }
+  .podium-place {
+    max-width: 100%;
+    width: 100%;
+  }
+  .podium-bar {
+    height: 40px !important;
+  }
+}

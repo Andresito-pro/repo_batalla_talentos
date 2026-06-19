@@ -1,0 +1,99 @@
+/* ============================================================
+   Batalla de Música
+   ============================================================ */
+
+.page-hero-music{
+  text-align: center;
+  padding: var(--space-lg) var(--space-md);
+  background: linear-gradient(
+    135deg,
+    var(--color-blue) 0%,
+    var(--color-bg) 100%
+  );
+}
+
+   .page-hero-music {
+  background: linear-gradient(
+    135deg,
+    var(--color-blue) 0%,
+    var(--color-bg) 100%
+  );
+}
+
+/* ---------- Notas decorativas ---------- */
+.music-notes {
+  position: absolute;
+  font-size: 4rem;
+  opacity: 0.08;
+  pointer-events: none;
+  animation: floatNote 6s ease-in-out infinite;
+  user-select: none;
+}
+
+@keyframes floatNote {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-5deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+}
+
+/* ---------- Reflexión música ---------- */
+.music-reflection {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: var(--space-lg) var(--space-md);
+}
+
+.music-reflection h2 {
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  margin-bottom: var(--space-sm);
+}
+
+.video-wrapper video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-md);
+  border: none;
+}
+
+.music-reflection p.lead {
+  font-size: 1.05rem;
+  color: var(--color-text-light);
+  margin-bottom: var(--space-md);
+}
+
+/* Highlights de música */
+.music-highlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: var(--space-sm);
+  margin: var(--space-md) 0;
+}
+
+.highlight-item {
+  background: white;
+  border-radius: var(--radius-md);
+  padding: var(--space-sm) var(--space-md);
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(168, 212, 240, 0.4);
+}
+
+.highlight-item .hi-icon {
+  font-size: 2rem;
+  margin-bottom: 6px;
+}
+.highlight-item h4 {
+  font-size: 0.95rem;
+  margin-bottom: 4px;
+}
+.highlight-item p {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+}

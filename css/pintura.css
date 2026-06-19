@@ -1,0 +1,219 @@
+/* ============================================================
+   Pintura y Dibujo
+   ============================================================ */
+.page-hero {
+  text-align: center;
+  padding: var(--space-lg) var(--space-md);
+  background: linear-gradient(
+    135deg,
+    var(--color-mint) 0%,
+    var(--color-bg) 100%
+  );
+}
+
+.page-hero.art {
+  background: linear-gradient(
+    135deg,
+    var(--color-mint) 0%,
+    var(--color-bg) 100%
+  );
+}
+
+/* ---------- Galería ---------- */
+.gallery-section {
+  padding: var(--space-lg) var(--space-md) var(--space-xl);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery-section h2 {
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  margin-bottom: var(--space-xs);
+}
+
+.my-photo-wrap.fade-in {
+  animation: fadeInUp 1s ease-out forwards;
+  margin-left: 600px;
+  margin-top: 40px;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+
+.my-photo-wrap.fade-in-two {
+  animation: fadeInUp 1s ease-out forwards;
+  margin-left: 350px;
+  margin-bottom: 70px;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+
+.other-photo-wrap.fade-in-three {
+  animation: fadeInUp 1s ease-out forwards;
+  margin-left: 580px;
+  margin-top: 50px;
+  width: 110%;
+  max-width: 650px;
+  height: auto;
+}
+
+.other-title {
+  margin-left: 600px;
+  text-align: center;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  margin-bottom: var(--space-xs);
+  margin-top: var(--space-lg);
+}
+
+.gallery-section .intro {
+  color: var(--color-text-light);
+  margin-bottom: var(--space-lg);
+}
+
+/* Cuadrícula masonry simulado */
+.gallery-grid {
+  columns: 3;
+  column-gap: var(--space-sm);
+}
+
+.gallery-item {
+  break-inside: avoid;
+  margin-bottom: var(--space-sm);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery-item img,
+.gallery-img-placeholder {
+  width: 100%;
+  display: block;
+  transition: transform var(--transition-slow);
+  border-radius: var(--radius-md);
+  
+  /* NUEVO: Mantiene la proporción de la imagen centrada sin distorsionar */
+  object-fit: cover;
+  object-position: center;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.04);
+}
+
+.gallery-img-placeholder {
+  background: var(--color-mint);
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #2e7a5a;
+  font-size: 0.82rem;
+  font-weight: 500;
+  text-align: center;
+  padding: var(--space-md);
+  border: 2px dashed #a8dfc8;
+}
+
+#my-part-title {
+  margin: var(--space-lg) 0 var(--space-md);
+  text-align: center;
+}
+
+/* Efecto overlay galería */
+.gallery-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(61, 58, 78, 0.5) 0%,
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity var(--transition);
+  display: flex;
+  align-items: flex-end;
+  padding: var(--space-sm);
+  border-radius: var(--radius-md);
+}
+
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+.gallery-overlay-text {
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* Lightbox */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 18, 30, 0.92);
+  z-index: 9000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition);
+}
+
+.lightbox.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.lightbox img {
+  max-width: 90vw;
+  max-height: 85vh;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  
+  /* NUEVO: Asegura que la imagen grande del Lightbox se mantenga centrada */
+  margin: auto;
+  display: block;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition);
+}
+
+.lightbox-close:hover {
+  background: var(--color-accent);
+  color: white;
+}
+
+@media (max-width: 700px) {
+  .gallery-grid {
+    columns: 2;
+  }
+}
+
+@media (max-width: 420px) {
+  .gallery-grid {
+    columns: 1;
+  }
+}

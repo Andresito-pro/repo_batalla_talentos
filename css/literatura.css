@@ -1,0 +1,134 @@
+/* ============================================================
+   Batalla de Literatura
+   ============================================================ */
+
+.page-hero{
+  text-align: center;
+  padding: var(--space-lg) var(--space-md);
+  background: linear-gradient(
+    135deg,
+    var(--color-lavender) 0%,
+    var(--color-bg) 100%
+  );
+}
+
+.page-hero.lit {
+  background: linear-gradient(
+    135deg,
+    var(--color-lavender) 0%,
+    var(--color-bg) 100%
+  );
+}
+
+/* ---------- Mi participación ---------- */
+.my-participation {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-lg) var(--space-md);
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: var(--space-xl);
+  align-items: start;
+}
+
+.my-photo-wrap {
+  position: sticky;
+  top: 90px;
+}
+
+.my-photo-wrap img,
+.my-photo-placeholder {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+
+.my-photo-placeholder {
+  background: var(--color-lavender);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  color: var(--color-accent);
+  font-size: 0.88rem;
+  font-weight: 500;
+  text-align: center;
+  padding: var(--space-md);
+  border: 2px dashed var(--color-accent-soft);
+}
+
+.participation-text .section-label {
+  margin-top: 0;
+}
+
+.participation-text h2 {
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  margin-bottom: var(--space-sm);
+}
+
+.participation-text p.lead {
+  font-size: 1.05rem;
+  color: var(--color-text-light);
+  margin-bottom: var(--space-md);
+  line-height: 1.8;
+}
+
+/* ---------- Otro participante ---------- */
+.other-participant {
+  background: var(--color-cream);
+  padding: var(--space-xl) var(--space-md);
+}
+
+.other-participant-desc {
+  color: var(--color-text-light);
+  margin-bottom: var(--space-md);
+  line-height: 1.8;
+}
+
+.other-participant-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: var(--space-xl);
+  align-items: start;
+}
+
+.other-photo-wrap img,
+.other-photo-placeholder {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+
+.other-photo-placeholder {
+  background: var(--color-mint);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  color: #2e7a5a;
+  font-size: 0.88rem;
+  font-weight: 500;
+  text-align: center;
+  padding: var(--space-md);
+  min-height: 300px;
+  border-radius: var(--radius-lg);
+  border: 2px dashed #a8dfc8;
+}
+
+@media (max-width: 900px) {
+  .my-participation,
+  .other-participant-inner {
+    grid-template-columns: 1fr;
+  }
+  .my-photo-wrap {
+    position: static;
+  }
+}

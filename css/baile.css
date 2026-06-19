@@ -1,0 +1,149 @@
+/* ============================================================
+   Batalla de Baile
+   ============================================================ */
+
+.page-hero {
+  padding: calc(68px + var(--space-xl)) var(--space-md) var(--space-lg);
+  background: linear-gradient(135deg, #fcebd8 0%, #faf8f5 100%);
+  text-align: center;
+}
+
+.page-hero .chip {
+  margin-bottom: var(--space-sm);
+}
+
+.page-hero h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  margin-bottom: var(--space-sm);
+}
+
+.page-hero p {
+  font-size: 1.05rem;
+  color: var(--color-text-light);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ---------- Video section ---------- */
+.video-section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: var(--space-lg) var(--space-md);
+}
+
+.video-section h2 {
+  font-size: 1.6rem;
+  margin-bottom: var(--space-md);
+  text-align: center;
+}
+
+/* ---------- Opiniones de participantes ---------- */
+.participants {
+  padding: var(--space-lg) var(--space-md) var(--space-xl);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.participants h2 {
+  font-size: 1.9rem;
+  margin-bottom: var(--space-xs);
+}
+
+.participants .intro {
+  color: var(--color-text-light);
+  margin-bottom: var(--space-lg);
+}
+
+.participants-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: var(--space-md);
+}
+
+.participant-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  transition: all var(--transition);
+}
+
+.participant-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.video-wrapper video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-md);
+  border: none;
+}
+
+
+.curtain-divider {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+
+#back-to-top {
+  width: 44px;
+  height: 44px;
+}
+
+.participant-card-header {
+  background: linear-gradient(135deg, #fcebd8, #faf8f5);
+  padding: var(--space-md);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.participant-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--color-cream);
+  border: 3px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  box-shadow: var(--shadow-sm);
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.participant-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.participant-info h3 {
+  font-size: 1.1rem;
+  margin-bottom: 2px;
+}
+
+.participant-info .role {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.participant-card-body {
+  padding: var(--space-md);
+}
+
+.participant-card-body .bilingual {
+  grid-template-columns: 1fr;
+  gap: var(--space-sm);
+  margin-top: 0;
+}
+
+.participant-card-body .lang-block {
+  padding: var(--space-sm) var(--space-md);
+}

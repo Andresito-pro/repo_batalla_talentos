@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Premiación — Ceremonia de cierre y reconocimiento a los ganadores de la Batalla de Talentos SENA."
+    />
+    <title>Premiación · Batalla de Talentos SENA</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/premiacion.css" />
+  </head>
+  <body>
+    <!-- Barra confeti animada arriba de todo -->
+    <div class="confetti-bar" aria-hidden="true"></div>
+
+    <!-- ====== NAVBAR ====== -->
+    <header class="navbar" role="banner">
+      <div class="nav-container">
+        <a href="../index.html" class="nav-logo">
+          Batalla de Talentos
+          <span>SENA · Memoria Digital</span>
+        </a>
+        <button
+          class="hamburger"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="nav-menu" role="list">
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="baile.html">Batalla de Baile</a></li>
+          <li><a href="literatura.html">Batalla de Literatura</a></li>
+          <li><a href="musica.html">Batalla de Música</a></li>
+          <li><a href="pintura.html">Pintura y Dibujo</a></li>
+          <li><a href="premiacion.html">Premiación</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- ── PAGE HERO ── -->
+      <section class="page-hero" aria-labelledby="page-title">
+        <div class="chip chip-award">🏆 Evento final</div>
+        <h1 id="page-title">Ceremonia de Premiación</h1>
+        <p class="lead">
+          El momento donde el esfuerzo, la dedicación y el talento fueron
+          reconocidos. Una noche que quedará grabada en la memoria de todos los
+          participantes.
+        </p>
+      </section>
+
+      <!-- ── VIDEO PREMIACIÓN ── -->
+      <section class="video-section" aria-labelledby="video-title">
+        <h2 id="video-title" class="fade-up">Video de la premiación</h2>
+
+        <div class="video-wrapper fade-up">
+          <!--
+          ════════════════════════════════════════════════════
+          REEMPLAZAR: Pega aquí la URL del video de la premiación en Cloudinary.
+          ════════════════════════════════════════════════════
+        -->
+          <div
+            class="video-placeholder"
+            role="img"
+            aria-label="Video de la premiación — pendiente de insertar"
+          >
+            <svg
+              width="56"
+              height="56"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              aria-hidden="true"
+              style="color: var(--color-accent)"
+            >
+              <circle cx="12" cy="12" r="10" />
+              <polygon points="10,8 16,12 10,16" />
+            </svg>
+            <strong>Video Ceremonia de Premiación</strong>
+            <p
+              style="
+                font-size: 0.82rem;
+                color: var(--color-text-muted);
+                max-width: 300px;
+              "
+            >
+              Reemplaza con el iframe de Cloudinary.<br />
+              <code
+                style="
+                  font-size: 0.75rem;
+                  background: rgba(0, 0, 0, 0.06);
+                  padding: 2px 6px;
+                  border-radius: 4px;
+                "
+                >&lt;iframe src="URL_CLOUDINARY"&gt;&lt;/iframe&gt;</code
+              >
+            </p>
+          </div>
+          <iframe
+            src="https://res.cloudinary.com/dey2nuffx/video/upload/v1781837400/whatApp_VideoPremiacion_rqi7t2.mp4"
+            title="Video Ceremonia de Premiación"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+</div>
+      </section>
+
+      <div
+        class="curtain-divider"
+        style="max-width: 900px; margin: 0 auto"
+        aria-hidden="true"
+      ></div>
+
+      <!-- ── PODIO DE GANADORES ── -->
+      <section class="winners-section" aria-labelledby="winners-title">
+        <p class="section-label fade-up">Reconocimientos</p>
+        <h2 class="fade-up" id="winners-title">Los grandes ganadores</h2>
+        <div class="podium fade-up" role="list">
+          <!-- 2.º lugar (izquierda) -->
+          <div class="podium-place" role="listitem">
+            <div class="podium-card">
+              <span class="podium-medal" aria-label="Medalla de plata">🥈</span>
+            </div>
+            <div class="podium-bar" aria-hidden="true">2</div>
+          </div>
+
+          <!-- 1.er lugar (centro, más alto) -->
+          <div class="podium-place" role="listitem">
+            <div class="podium-card" style="border: 2px solid #f7d794">
+              <span class="podium-medal" aria-label="Trofeo de oro">🥇</span>
+            </div>
+            <div
+              class="podium-bar"
+              aria-hidden="true"
+              style="font-size: 2rem; color: #c09030"
+            >
+              1
+            </div>
+          </div>
+
+          <!-- 3.er lugar (derecha) -->
+          <div class="podium-place" role="listitem">
+            <div class="podium-card">
+              <span class="podium-medal" aria-label="Medalla de bronce"
+                >🥉</span>
+            </div>
+            <div class="podium-bar" aria-hidden="true">3</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── MENSAJE DE FELICITACIÓN ── -->
+      <section class="congrats-section" aria-labelledby="congrats-title">
+        <div class="congrats-inner">
+          <span class="trophy-icon" aria-hidden="true">🏆</span>
+          <p class="section-label">Mensaje final</p>
+          <h2 class="fade-up" id="congrats-title">¡Felicitaciones a todos!</h2>
+          <p class="lead fade-up">
+            Cada persona que subió al escenario es ya un ganador. El verdadero
+            premio es haberlo intentado.
+          </p>
+
+          <div class="bilingual fade-up" style="text-align: left">
+            <!-- Español -->
+            <div class="lang-block es">
+              <span class="lang-tag es">🇨🇴 Español</span>
+              <p>
+                ¡Felicitaciones a todos los ganadores de la Batalla de Talentos!
+                Su dedicación, esfuerzo y valentía para subir al escenario
+                merecen todo el reconocimiento del mundo. Pero quiero ir más
+                allá de los primeros puestos: cada uno de los participantes —los
+                que ganaron un premio y los que no— hicieron de este evento algo
+                extraordinario.
+              </p>
+              <br />
+              <p>
+                Quiero felicitar sinceramente a todos los ganadores de cada categoría por su esfuerzo y dedicación, 
+                así como reconocer a todos los participantes que hicieron parte de este evento. Cada presentación
+                 mostró el talento, la disciplina y la pasión que existe en el SENA.
+                También es importante agradecer a los organizadores e instructores que hicieron posible 
+                esta experiencia, guiando y apoyando cada proceso. Este tipo de espacios nos recuerdan la gran 
+                cantidad de talento que hay dentro de la institución y lo valioso que es seguir cultivándolo.
+                Más allá de los resultados, lo importante es seguir aprendiendo, creciendo y creyendo en nuestras habilidades.
+              </p>
+              <br />
+              <p>
+                El SENA nos ha demostrado una vez más que la formación técnica y
+                el arte no están separados — coexisten, se complementan y juntos
+                forman personas integrales capaces de transformar su entorno. El
+                talento que vi en este evento me llena de esperanza y orgullo
+                por nuestra comunidad.
+              </p>
+            </div>
+
+            <!-- English -->
+            <div class="lang-block en">
+              <span class="lang-tag en">🇺🇸 English</span>
+              <p>
+                Congratulations to all the winners of the Talent Battle! Your dedication, 
+                effort, and courage to step onto the stage deserve all the recognition in the world. 
+                But I want to go beyond the top places: every single participant—those who won a prize 
+                and those who did not—made this event something extraordinary.
+              </p>
+              <br />
+              <p>
+                I sincerely want to congratulate all the winners in each category for their effort and dedication, 
+                as well as recognize all the participants who took part in this event. Each performance showed 
+                the talent, discipline, and passion that exist at SENA.
+                It is also important to thank the organizers and instructors who made this experience 
+                possible, guiding and supporting every process. These kinds of spaces remind us of the great 
+                amount of talent within the institution and how valuable it is to keep nurturing it.
+                Beyond the results, what truly matters is continuing to learn, grow, and believe in our abilities.
+              </p>
+              <br />
+              <p>
+                SENA has once again shown us that technical training and art are not separate—they 
+                coexist, complement each other, and together shape well-rounded individuals capable 
+                of transforming their environment. The talent I witnessed at this event fills me with hope 
+                and pride for our community.
+
+              </p>
+            </div>
+          </div>
+
+          <!-- CTA final -->
+          <div style="margin-top: var(--space-lg)" class="fade-up">
+            <a href="../index.html" class="btn btn-primary"
+              >← Volver al inicio</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ====== FOOTER ====== -->
+    <footer class="footer" role="contentinfo">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <h3>Batalla de Talentos</h3>
+          <p>Memoria digital del evento artístico celebrado en el SENA.</p>
+        </div>
+        <nav class="footer-nav" aria-label="Pie de página">
+          <h4>Secciones</h4>
+          <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="baile.html">Baile</a></li>
+            <li><a href="literatura.html">Literatura</a></li>
+            <li><a href="musica.html">Música</a></li>
+            <li><a href="pintura.html">Pintura y Dibujo</a></li>
+            <li><a href="premiacion.html">Premiación</a></li>
+          </ul>
+        </nav>
+        <div class="footer-info">
+          <h4>Información</h4>
+          <p>📍 SENA — Colombia</p>
+          <p>📅 Año del evento: 2024</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2024 Batalla de Talentos SENA</span>
+        <span>Hecho con ❤️ y talento</span>
+      </div>
+    </footer>
+
+    <button id="back-to-top" aria-label="Volver al inicio de la página">
+      <svg
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2.5"
+        aria-hidden="true"
+      >
+        <path d="m18 15-6-6-6 6" />
+      </svg>
+    </button>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/animations.js"></script>
+    <script src="../js/navigation.js"></script>
+  </body>
+</html>
